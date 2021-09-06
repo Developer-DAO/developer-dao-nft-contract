@@ -788,7 +788,8 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
     }
 
     /**
-     * @dev Base URI for computing {tokenURI}. If set, the resulting URI for each
+     * @dev Base URI for computing {f&
+     }. If set, the resulting URI for each
      * token will be the concatenation of the `baseURI` and the `tokenId`. Empty
      * by default, can be overriden in child contracts.
      */
@@ -1315,7 +1316,7 @@ contract Dev is ERC721Enumerable, ReentrancyGuard, Ownable {
         "Brackets",
         "Atom",
         "Notepad++",
-        "Pen & Paper",
+        "Pen and Paper",
         "Visual Studio",
         "Sand and Stick",
         "Mental Telepathy",
