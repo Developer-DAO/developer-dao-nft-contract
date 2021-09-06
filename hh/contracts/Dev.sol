@@ -1393,7 +1393,7 @@ contract Dev is ERC721Enumerable, ReentrancyGuard, Ownable {
         "Hong Kong",
         "Jackson",
         "Budapest",
-        "Sao Palo",
+        "Sao Paulo",
         "Lagos",
         "Omaha",
         "Gold Coast",
