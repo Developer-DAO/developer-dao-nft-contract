@@ -46,8 +46,32 @@ docker build . -t devdaolocal;
 
 **NOTE:** This is still a WIP and still needs to be finalized
 
+**NOTE:** Make sure no other PORT is actively using 8545 when running;
+
+Option 1: Start the server in the background
+
 ```bash
 docker run -it -d -p 8545:8545 --name devdao devdaolocal;
+```
+
+Option 2: Start the server actively
+
+```bash
+docker run -it -p 8545:8545 --name devdao devdaolocal;
+```
+
+Deploy local network
+
+```bash
+# make sure the node has started with a bunch of wallet addresses showing
+# docker logs devdao;
+docker exec -it devdao /bin/sh -c "cd /usr/src/app; yarn deploy:local"
+```
+
+Retrieve contract id
+
+```bash
+docker exec -it devdao /bin/sh -c "cd /usr/src/app; cat .contract"
 ```
 
 To remove docker:

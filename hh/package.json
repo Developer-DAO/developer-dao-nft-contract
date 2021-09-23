@@ -6,7 +6,7 @@
   "scripts": {
     "test:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js test",
     "compile:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js compile",
-    "deploy:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js run scripts/deploy.js | sed 's/Dev deployed to: //' | tr -d \\n > .contract",
+    "deploy:local": "./node_modules/.bin/hardhat --network localhost --config hardhat.config.local.js run scripts/deploy.js | sed 's/Dev deployed to: //' | tr -d \\n | sed -ne':a;$p;N;1,$D;ba' > .contract",
     "start:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js node"
   },
   "keywords": [],

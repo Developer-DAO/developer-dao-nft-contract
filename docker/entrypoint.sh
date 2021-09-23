@@ -3,9 +3,6 @@
 # Change to the correct directory
 cd /usr/src/app;
 
-# Ouput contract address generated
-cat .contract;
-
 # Run hardhat
 yarn start:local;
 
