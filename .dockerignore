@@ -1,0 +1,12 @@
+node_modules/
+*/node_modules/
+.git
+public
+.cache
+package-lock.json
+.env
+.contract
+hh/artifacts
+hh/cache
+hh/node_modules
+hh/.contract
