@@ -2,7 +2,7 @@ FROM node:14-alpine
 
 COPY $PWD/hh /usr/src/app
 
-RUN apk update && apk add git;
+RUN apk add git;
 
 WORKDIR /usr/src/app
 
