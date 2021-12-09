@@ -1,0 +1,8 @@
+Drama
+Comedy
+Action
+Fantasy
+Horror
+Romance
+Western
+Thriller

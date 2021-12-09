@@ -1,0 +1,8 @@
+INT. Hallway
+INT. Bedroom
+INT. Park
+INT. Office
+INT. Kitchen
+EXT. Park
+EXT. Lake
+EXT. Highway

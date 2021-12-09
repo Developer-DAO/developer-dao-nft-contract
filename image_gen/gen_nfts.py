@@ -6,7 +6,7 @@ import sys
 import random
 from pathlib import Path
 from dotenv import load_dotenv
-from PIL import Image,ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
 
 
@@ -60,17 +60,18 @@ def save_image(nft_num, this_nft):
         nft_num(str) - this NFT id
         this_nft(str) - the content of this nft
     """
-    img = Image.new('RGB', (300, 300), color=(0, 0, 0))
+    img = Image.new('RGB', (600, 600), color=(255, 255, 255))
     d = ImageDraw.Draw(img)
 
-    d.text((10, 50), this_nft, fill=(255,255,255))
-    d.text((250, 30), "#{}".format(str(nft_num)) , fill=(255, 255, 255))
+    fnt = ImageFont.truetype("Roboto-Medium.ttf", 30)
+    d.text((20, 150), this_nft, font=fnt, fill=(0, 0, 0))
+    d.text((550, 30), "#{}".format(str(nft_num)), font=fnt, fill=(0, 0, 0))
 
     try:
         nft_name = "nft_{}.png".format(str(nft_num))
         img.save(nft_name)
     except:
-        print("Could not save {0} with {1}".format(nft_num, nft_str))
+        print("Could not save {0} with {1}".format(nft_num, this_nft))
 
 
 def get_traits_list(num_trait_lines):
@@ -115,7 +116,7 @@ def generate_nfts(num_edition, num_trait_lines, traits_list):
         num_trait_lines (str) - the number of trait lines in one nft
         traits_list (list) - multi-dimensional list with all traits
     """
-    for n in range(int(num_edition)):
+    for n in range(1, int(num_edition) + 1):
         this_nft = get_this_nft(num_trait_lines, traits_list)
         save_image(n, this_nft)
 
